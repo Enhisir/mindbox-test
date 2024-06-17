@@ -4,24 +4,37 @@ public class Triangle : Figure
 {
     private readonly double[] _edges;
 
+    public double[] Edges
+    {
+        get
+        {
+            var copy = new double[3];
+            Array.Copy(_edges, copy, 3);
+            return copy;
+        }
+    }
+
     public Triangle(double a, double b, double c)
     {
         _edges = [a, b, c];
         if (!Validate())
             throw new ArgumentException(
-                $"Стороны треуголника неверно подобраны: {_edges[0]}, {_edges[1]}, {_edges[1]}");
+                $"Стороны треуголника неверно подобраны: {_edges[0]}, {_edges[1]}, {_edges[2]}");
     }
 
     /// <summary>
     /// вычисляет площадь по формуле Герона.
     /// <see href="https://clck.ru/3BKara">Подробнее</see>
     /// </summary>
-    public override double GetSquare()
+    public override double Square
     {
-        var (a, b, c) = (_edges[0], _edges[1], _edges[1]);
-        var p = _edges.Sum() / 2;
+        get
+        {
+            var (a, b, c) = (_edges[0], _edges[1], _edges[2]);
+            var p = _edges.Sum() / 2;
 
-        return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+            return Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+        }
     }
 
     public bool IsRectangular()
@@ -36,9 +49,8 @@ public class Triangle : Figure
 
     protected sealed override bool Validate()
     {
-        var (a, b, c) = (_edges[0], _edges[1], _edges[1]);
-        return a > 0 && b > 0 && c > 0
-               && a < b + c
+        var (a, b, c) = (_edges[0], _edges[1], _edges[2]);
+        return a < b + c
                && b < a + c
                && c < a + b;
     }

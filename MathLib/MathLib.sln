@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLib", "MathLib\MathLib.csproj", "{70DEB4D1-2A02-445C-842B-DECD2E541415}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathLib.Tests", "MathLib.Tests\MathLib.Tests.csproj", "{749B831D-64AA-4D70-8C97-DD946D822B8F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{70DEB4D1-2A02-445C-842B-DECD2E541415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70DEB4D1-2A02-445C-842B-DECD2E541415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70DEB4D1-2A02-445C-842B-DECD2E541415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{749B831D-64AA-4D70-8C97-DD946D822B8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{749B831D-64AA-4D70-8C97-DD946D822B8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{749B831D-64AA-4D70-8C97-DD946D822B8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{749B831D-64AA-4D70-8C97-DD946D822B8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

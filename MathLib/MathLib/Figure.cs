@@ -4,5 +4,5 @@ public abstract class Figure
 {
     protected abstract bool Validate();
     
-    public abstract double GetSquare();
+    public abstract double Square { get; }
 }
