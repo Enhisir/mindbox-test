@@ -21,7 +21,7 @@ public class CircleTest
     [InlineData(3.14, double.Pi * 3.14 * 3.14)]
     public void Square_ReturnsCorrectAnswer(double r, double correctAnswer)
     {
-        const double accuracy = 1e-2;
+        const double accuracy = 1e-20;
 
         var circle = new Circle(r);
         var actualAnswer = circle.Square;
